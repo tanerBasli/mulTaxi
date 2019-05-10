@@ -3,7 +3,7 @@ package com.cafeintech.multaxi.client.model.response;
 
 import java.util.List;
 
-import com.taxibus.client.model.UserCoordinateModel;
+import com.cafeintech.multaxi.client.model.UserCoordinateModel;
 
 public class TaxiNearUsersResponseModel extends BaseClientResponseModel {
 
