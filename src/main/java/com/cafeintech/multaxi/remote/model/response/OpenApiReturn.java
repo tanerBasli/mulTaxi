@@ -1,4 +1,4 @@
-package com.multaxi.remote.model.response;
+package com.cafeintech.multaxi.remote.model.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

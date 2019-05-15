@@ -1,4 +1,4 @@
-package com.multaxi.remote.model.response;
+package com.cafeintech.multaxi.remote.model.response;
 
 public class TokenResponseModel extends BaseResponseModel {
 
