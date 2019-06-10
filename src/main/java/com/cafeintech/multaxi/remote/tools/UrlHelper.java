@@ -1,4 +1,4 @@
-package com.multaxi.remote.tools;
+package com.cafeintech.multaxi.remote.tools;
 
 public class UrlHelper {
 

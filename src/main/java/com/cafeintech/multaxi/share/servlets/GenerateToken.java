@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.multaxi.share.servlets;
+package com.cafeintech.multaxi.share.servlets;
 
 import java.io.IOException;
 
