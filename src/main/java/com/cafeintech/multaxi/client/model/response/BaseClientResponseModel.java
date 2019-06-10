@@ -1,6 +1,6 @@
-package com.multaxi.client.model.response;
+package com.cafeintech.multaxi.client.model.response;
 
-import com.multaxi.client.model.BaseModel;
+import com.cafeintech.multaxi.client.model.BaseModel;
 
 public class BaseClientResponseModel extends BaseModel {
 

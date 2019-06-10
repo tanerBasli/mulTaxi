@@ -1,4 +1,4 @@
-package com.multaxi.client.model;
+package com.cafeintech.multaxi.client.model;
 
 public class TaxiModel extends UserModel {
 

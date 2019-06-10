@@ -1,4 +1,4 @@
-package com.multaxi.client.model.response;
+package com.cafeintech.multaxi.client.model.response;
 
 
 import java.util.List;
