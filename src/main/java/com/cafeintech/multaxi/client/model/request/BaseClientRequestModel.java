@@ -1,4 +1,4 @@
-package com.multaxi.client.model.request;
+package com.cafeintech.multaxi.client.model.request;
 
 import com.taxibus.client.model.BaseModel;
 
