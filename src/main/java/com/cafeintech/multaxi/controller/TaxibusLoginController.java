@@ -1,4 +1,4 @@
-package com.multaxi.controller;
+package com.cafeintech.multaxi.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

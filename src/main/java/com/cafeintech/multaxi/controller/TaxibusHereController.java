@@ -1,10 +1,10 @@
-package com.multaxi.controller;
+package com.cafeintech.multaxi.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.multaxi.client.model.response.TokenModel;
-import com.multaxi.controller.util.RandomStringGenerator;
+import com.cafeintech.multaxi.client.model.response.TokenModel;
+import com.cafeintech.multaxi.controller.util.RandomStringGenerator;
 
 @RestController
 public class TaxibusHereController {
