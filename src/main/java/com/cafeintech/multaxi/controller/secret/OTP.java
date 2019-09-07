@@ -1,9 +1,5 @@
 package com.cafeintech.multaxi.controller.secret;
 
-import com.bastiaanjansen.otp.helpers.URIHelper;
-
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
@@ -12,7 +8,12 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+
 import org.apache.commons.codec.binary.Base32;
+
+import com.cafeintech.multaxi.controller.helper.URIHelper;
 
 class OTP {
 	private final static String URL_SCHEME = "otpauth";
@@ -20,7 +21,7 @@ class OTP {
 	/**
 	 * Default value for password length
 	 */
-	private static final int DEFAULT_PASSWORD_LENGTH = 6;
+	private static final int DEFAULT_PASSWORD_LENGTH = 8;
 
 	/**
 	 * Default value for HMAC Algorithm
