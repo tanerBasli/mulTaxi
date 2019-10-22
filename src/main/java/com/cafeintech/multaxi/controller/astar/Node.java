@@ -1,4 +1,4 @@
-package com.multaxi.controller.astar;
+package com.cafeintech.multaxi.controller.astar;
 
 
 public class Node {

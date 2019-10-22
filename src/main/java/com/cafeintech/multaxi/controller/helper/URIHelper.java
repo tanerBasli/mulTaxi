@@ -1,4 +1,4 @@
-package com.multaxi.controller.helper;
+package com.cafeintech.multaxi.controller.helper;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
