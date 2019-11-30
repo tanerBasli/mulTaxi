@@ -1,4 +1,4 @@
-package com.multaxi.configuration;
+package com.cafeintech.multaxi.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

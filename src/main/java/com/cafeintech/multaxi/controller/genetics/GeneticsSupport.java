@@ -1,4 +1,4 @@
-package com.multaxi.controller.genetics;
+package com.cafeintech.multaxi.controller.genetics;
 import java.util.Random;
 
 
