@@ -1,4 +1,4 @@
-package com.multaxi.controller.secret;
+package com.cafeintech.multaxi.controller.secret;
 
 import com.bastiaanjansen.otp.helpers.URIHelper;
 

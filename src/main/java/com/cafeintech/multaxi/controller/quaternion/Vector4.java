@@ -30,7 +30,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.multaxi.controller.quaternion;
+package com.cafeintech.multaxi.controller.quaternion;
 
 public abstract class Vector4<ResultType extends Vector4<ResultType>> extends Vector<ResultType>
 		implements java.io.Serializable {

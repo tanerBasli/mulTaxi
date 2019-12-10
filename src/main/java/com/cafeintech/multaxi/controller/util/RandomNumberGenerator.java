@@ -1,4 +1,4 @@
-package com.multaxi.controller.util;
+package com.cafeintech.multaxi.controller.util;
 
 import java.util.Random;
 
