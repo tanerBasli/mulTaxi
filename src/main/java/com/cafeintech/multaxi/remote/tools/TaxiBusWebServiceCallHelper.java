@@ -12,10 +12,10 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import com.cafeintech.multaxi.remote.model.request.BaseRequestModel;
+import com.cafeintech.multaxi.remote.model.response.OpenApiResponseWrapper;
+import com.cafeintech.multaxi.remote.model.response.TokenResponseModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.taxibus.remote.model.request.BaseRequestModel;
-import com.taxibus.remote.model.response.OpenApiResponseWrapper;
-import com.taxibus.remote.model.response.TokenResponseModel;
 
 public class TaxiBusWebServiceCallHelper {
 

@@ -1,6 +1,6 @@
 package com.cafeintech.multaxi.remote.tools;
 
-import com.taxibus.remote.model.response.TokenResponseModel;
+import com.cafeintech.multaxi.remote.model.response.TokenResponseModel;
 
 public class TokenHelper {
 
