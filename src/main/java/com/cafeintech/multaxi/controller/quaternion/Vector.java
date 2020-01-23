@@ -1,4 +1,4 @@
-package com.multaxi.controller.quaternion;
+package com.cafeintech.multaxi.controller.quaternion;
 
 import java.nio.FloatBuffer;
 
