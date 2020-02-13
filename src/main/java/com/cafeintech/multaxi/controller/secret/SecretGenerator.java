@@ -1,4 +1,4 @@
-package com.multaxi.controller.secret;
+package com.cafeintech.multaxi.controller.secret;
 
 import org.apache.commons.codec.binary.Base32;
 
