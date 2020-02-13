@@ -1,5 +1,8 @@
 package com.cafeintech.multaxi.remote.tools;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import com.cafeintech.multaxi.remote.model.response.TokenResponseModel;
 
 public class TokenHelper {
@@ -9,16 +12,15 @@ public class TokenHelper {
 	private static TokenHelper tokenHelper;
 
 	private TokenHelper() {
-		
-//		TimerTask timertask = new TimerTask() {
-//			@Override
-//			public void run() {
-//				token = new TaxiBusWebServiceCallHelper().createTokenResponse();
-//			}
-//		};
-//
-//		Timer timer = new Timer();
-//		timer.schedule(timertask, 0, token.getExpiresIn());
+		TimerTask timertask = new TimerTask() {
+			@Override
+			public void run() {
+				token = new TaxiBusWebServiceCallHelper().createTokenResponse();
+			}
+		};
+
+		Timer timer = new Timer();
+		timer.schedule(timertask, 0, token.getExpiresIn());
 	}
 
 	public synchronized static TokenHelper getInstance() {
