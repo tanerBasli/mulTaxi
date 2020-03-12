@@ -2,6 +2,7 @@ package com.cafeintech.multaxi.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +21,9 @@ public class TaxibusLoginController {
  
 	@PostMapping("/checkOtp.json")
     public void checkOtp(HttpServletRequest request, @RequestBody OtpValidationRequestModel requestModel) {
-    	/**
-    	 * TODO: OTP control must be impelemted
-    	 */
-    	
+    	if (StringUtils.hasText(requestModel.getSmsCode())) {
+    		throw new RuntimeException("Sms code can not be empty");
+    	}
     }
 }
 
