@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.multaxi.share.servlets;
+package com.cafeintech.multaxi.share.servlets;
 
 // [START example]
 import com.google.appengine.api.utils.SystemProperty;
