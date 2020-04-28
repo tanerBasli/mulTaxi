@@ -21,7 +21,7 @@ public class TaxibusLoginController {
  
 	@PostMapping("/checkOtp.json")
     public void checkOtp(HttpServletRequest request, @RequestBody OtpValidationRequestModel requestModel) {
-    	if (StringUtils.hasText(requestModel.getSmsCode())) {
+    	if (!StringUtils.hasText(requestModel.getSmsCode())) {
     		throw new RuntimeException("Sms code can not be empty");
     	}
     }
