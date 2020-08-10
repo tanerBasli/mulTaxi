@@ -34,6 +34,9 @@ package com.cafeintech.multaxi.controller.quaternion;
 
 import javax.annotation.Nonnull;
 
+import com.jme3.math.FastMath;
+import com.jme3.math.Vector2f;
+
 public final class Vector3f extends Vector<Vector3f> implements java.io.Serializable {
 	static final long serialVersionUID = 1;
 

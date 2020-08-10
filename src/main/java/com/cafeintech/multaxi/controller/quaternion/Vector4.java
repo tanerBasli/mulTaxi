@@ -32,6 +32,8 @@
 
 package com.cafeintech.multaxi.controller.quaternion;
 
+import com.jme3.math.FastMath;
+
 public abstract class Vector4<ResultType extends Vector4<ResultType>> extends Vector<ResultType>
 		implements java.io.Serializable {
 	static final long serialVersionUID = 1;

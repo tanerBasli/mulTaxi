@@ -4,6 +4,8 @@ import java.nio.FloatBuffer;
 
 import javax.annotation.Nonnull;
 
+import com.jme3.math.FastMath;
+
 public abstract class Vector<ResultType extends Vector<ResultType>> {
 
 	@SuppressWarnings("unchecked")

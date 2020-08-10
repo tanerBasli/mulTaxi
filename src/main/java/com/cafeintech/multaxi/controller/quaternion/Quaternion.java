@@ -33,6 +33,10 @@ package com.cafeintech.multaxi.controller.quaternion;
 
 import java.util.logging.Logger;
 
+import com.jme3.math.FastMath;
+import com.jme3.math.Matrix4f;
+import com.sun.javafx.geom.Matrix3f;
+
 public final class Quaternion extends Vector4<Quaternion> implements java.io.Serializable {
 
 	static final long serialVersionUID = 1;
