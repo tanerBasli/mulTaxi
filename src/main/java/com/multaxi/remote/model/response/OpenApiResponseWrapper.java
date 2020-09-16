@@ -1,4 +1,4 @@
-package com.taxibus.remote.model.response;
+package com.multaxi.remote.model.response;
 
 public class OpenApiResponseWrapper<T> {
 

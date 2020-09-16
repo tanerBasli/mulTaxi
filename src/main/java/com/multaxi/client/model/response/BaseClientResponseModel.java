@@ -1,6 +1,6 @@
-package com.taxibus.client.model.response;
+package com.multaxi.client.model.response;
 
-import com.taxibus.client.model.BaseModel;
+import com.multaxi.client.model.BaseModel;
 
 public class BaseClientResponseModel extends BaseModel {
 

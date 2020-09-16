@@ -1,4 +1,4 @@
-package com.taxibus.remote.tools;
+package com.multaxi.remote.tools;
 
 import java.io.IOException;
 import java.util.Date;
