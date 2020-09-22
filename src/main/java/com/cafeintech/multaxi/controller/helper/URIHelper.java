@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,12 +29,8 @@ public class URIHelper {
 
 		for (String pair : pairs) {
 			int index = pair.indexOf("=");
-			try {
-				items.put(URLDecoder.decode(pair.substring(0, index), "UTF-8"),
-						URLDecoder.decode(pair.substring(index + 1), "UTF-8"));
-			} catch (UnsupportedEncodingException e) {
-				throw new IllegalStateException("Encoding should be supported");
-			}
+			items.put(URLDecoder.decode(pair.substring(0, index), StandardCharsets.UTF_8),
+					URLDecoder.decode(pair.substring(index + 1), StandardCharsets.UTF_8));
 		}
 		return items;
 	}
