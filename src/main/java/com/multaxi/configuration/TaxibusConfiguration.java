@@ -1,4 +1,4 @@
-package com.taxibus.configuration;
+package com.multaxi.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

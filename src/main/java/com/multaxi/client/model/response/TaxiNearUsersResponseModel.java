@@ -1,4 +1,4 @@
-package com.taxibus.client.model.response;
+package com.multaxi.client.model.response;
 
 
 import java.util.List;

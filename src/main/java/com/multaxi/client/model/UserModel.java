@@ -1,4 +1,4 @@
-package com.taxibus.client.model;
+package com.multaxi.client.model;
 
 import java.util.List;
 
