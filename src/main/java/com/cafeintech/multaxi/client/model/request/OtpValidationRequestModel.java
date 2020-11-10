@@ -1,14 +1,16 @@
 package com.cafeintech.multaxi.client.model.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class OtpValidationRequestModel extends BaseClientRequestModel {
 	
 	private String smsCode;
 
-	public String getSmsCode() {
-		return smsCode;
-	}
-
-	public void setSmsCode(String smsCode) {
-		this.smsCode = smsCode;
-	}
 }
