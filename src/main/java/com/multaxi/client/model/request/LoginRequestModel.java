@@ -1,4 +1,4 @@
-package com.taxibus.client.model.request;
+package com.multaxi.client.model.request;
 
 public class LoginRequestModel extends BaseClientRequestModel {
 

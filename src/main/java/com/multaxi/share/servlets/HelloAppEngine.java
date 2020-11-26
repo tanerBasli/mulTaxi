@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.taxibus.share.servlets;
+package com.multaxi.share.servlets;
 
 // [START example]
 import com.google.appengine.api.utils.SystemProperty;
