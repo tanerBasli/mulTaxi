@@ -99,7 +99,7 @@ public class TaxiBusWebServiceCallHelper {
 		headers.add("CONTENT_TYPE", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
 		headers.add("Accept", "application/json");
 		MultiValueMap<String, String> body = new LinkedMultiValueMap<String, String>();
-		body.add("email", "ahmetvefasaruhan53@gmail.com");
+		body.add("email", "qwerty@gmail.com");
 		body.add("password", "serah34020");
 		body.add("oauth_consumer_key", "47164fb0-b7b3-49e8-891b-650270b82cf2");
 		body.add("oauth_signature_method", "HMAC-SHA256");
@@ -107,7 +107,7 @@ public class TaxiBusWebServiceCallHelper {
 		body.add("oauth_nonce", "qJ1VFt");
 		body.add("oauth_version", "1.0");
 		HttpEntity<?> entity = new HttpEntity<Object>(body, headers);
-		ResponseEntity<String> result = restTemplate.exchange(UrlHelper.tokenUrl, HttpMethod.POST, entity, String.class);
+		ResponseEntity<String> result = restTemplate.postForEntity(UrlHelper.tokenUrl, entity, String.class);
 		TokenResponseModel model;
 		try {
 			model = new ObjectMapper().readValue(result.getBody(), TokenResponseModel.class);
