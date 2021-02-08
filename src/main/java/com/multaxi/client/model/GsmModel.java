@@ -6,6 +6,7 @@ public class GsmModel extends BaseModel {
 	private String areaCode;
 	private String number;
 	private String fullNumber;
+	
 	public String getCountryCode() {
 		return countryCode;
 	}
