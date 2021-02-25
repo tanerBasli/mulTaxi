@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,9 @@ import com.cafeintech.multaxi.remote.model.response.OpenApiResponseWrapper;
 import com.cafeintech.multaxi.remote.model.response.TokenResponseModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class TaxiBusWebServiceCallHelper {
 
 	public static java.time.Instant lastInstant;
@@ -52,9 +56,9 @@ public class TaxiBusWebServiceCallHelper {
 	public <T extends BaseRequestModel, U> U makeHttpRequestWrapper(String url, T request, Class<U> response) {
 
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
-		headers.add("CONTENT_TYPE", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-		headers.add("Accept", "application/json");
-		headers.add("Authorization", TokenHelper.getInstance().getToken());
+		headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+		headers.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+		headers.add(HttpHeaders.AUTHORIZATION, TokenHelper.getInstance().getToken());
 
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<T> entity = new HttpEntity<T>(request, headers);
@@ -71,9 +75,9 @@ public class TaxiBusWebServiceCallHelper {
 	public <T extends BaseRequestModel, U> U makeHttpRequest(String url, T request, Class<U> response) {
 
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
-		headers.add("CONTENT_TYPE", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-		headers.add("Accept", "application/json");
-		headers.add("Authorization", TokenHelper.getInstance().getToken());
+		headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+		headers.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+		headers.add(HttpHeaders.AUTHORIZATION, TokenHelper.getInstance().getToken());
 
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<T> entity = new HttpEntity<T>(request, headers);
@@ -96,8 +100,9 @@ public class TaxiBusWebServiceCallHelper {
 		RestTemplate restTemplate = new RestTemplate();
 
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
-		headers.add("CONTENT_TYPE", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-		headers.add("Accept", "application/json");
+		headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+		headers.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+
 		MultiValueMap<String, String> body = new LinkedMultiValueMap<String, String>();
 		body.add("email", "qwerty@gmail.com");
 		body.add("password", "serah34020");
@@ -110,11 +115,12 @@ public class TaxiBusWebServiceCallHelper {
 		ResponseEntity<String> result = restTemplate.postForEntity(UrlHelper.tokenUrl, entity, String.class);
 		TokenResponseModel model;
 		try {
-			model = new ObjectMapper().readValue(result.getBody(), TokenResponseModel.class);
-			logToConsole(model);
+			String responseBody = result.getBody();
+			log.info(responseBody);
+			model = new ObjectMapper().readValue(responseBody, TokenResponseModel.class);
 			return model;
 		} catch (IOException e) {
-			logToConsole("Hata al�nd�");
+			log.error("Hata alindi", e);
 		}
 
 		return new TokenResponseModel();
@@ -122,21 +128,6 @@ public class TaxiBusWebServiceCallHelper {
 
 	public synchronized String createToken() {
 		return createToken();
-	}
-
-	/**
-	 * email:ahmetvefasaruhan53@gmail.com
-password:serah34020
-oauth_consumer_key:47164fb0-b7b3-49e8-891b-650270b82cf2
-oauth_token:
-oauth_signature_method:HMAC-SHA256
-oauth_timestamp:1520769651
-oauth_nonce:qJ1VFt
-oauth_version:1.0
-	 */
-
-	public void logToConsole(Object log) {
-		System.out.println(log);
 	}
 
 }
