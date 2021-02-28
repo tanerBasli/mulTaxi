@@ -111,8 +111,10 @@ public class TaxiBusWebServiceCallHelper {
 		body.add("oauth_timestamp", "" + new Date().getTime());
 		body.add("oauth_nonce", "qJ1VFt");
 		body.add("oauth_version", "1.0");
+
 		HttpEntity<?> entity = new HttpEntity<Object>(body, headers);
 		ResponseEntity<String> result = restTemplate.postForEntity(UrlHelper.tokenUrl, entity, String.class);
+
 		TokenResponseModel model;
 		try {
 			String responseBody = result.getBody();
@@ -124,10 +126,6 @@ public class TaxiBusWebServiceCallHelper {
 		}
 
 		return new TokenResponseModel();
-	}
-
-	public synchronized String createToken() {
-		return createToken();
 	}
 
 }
