@@ -21,7 +21,10 @@ public class TaxibusLoginController {
  
     @RequestMapping(method= RequestMethod.POST ,value="/checkOtp.json")
     public void checkOtp(HttpServletRequest request, @RequestBody OtpValidationRequestModel requestModel) {
-
+    	/**
+    	 * TODO: OTP control must be impelemted
+    	 */
+    	
     }
 }
 

@@ -3,7 +3,8 @@ package com.multaxi.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.taxibus.client.model.response.TokenModel;
+import com.multaxi.client.model.response.TokenModel;
+import com.multaxi.controller.util.RandomStringGenerator;
 
 @RestController
 public class TaxibusHereController {
@@ -15,7 +16,10 @@ public class TaxibusHereController {
  
     @RequestMapping("/gettoken.json")
     public TokenModel message() {//REST Endpoint.
-        return new TokenModel("TOKEN_DENEME");
+    	
+    	RandomStringGenerator generator = new RandomStringGenerator();
+    	
+        return new TokenModel(generator.randomString(32));
     }
 	
 }
