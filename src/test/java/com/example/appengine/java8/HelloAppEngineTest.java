@@ -36,56 +36,52 @@ import java.io.StringWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Unit tests for {@link HelloAppEngine}.
- */
-// [START example]
 @RunWith(JUnit4.class)
 public class HelloAppEngineTest {
-  private static final String FAKE_URL = "localhost:8080/hello";
-  // Set up a helper so that the ApiProxy returns a valid environment for local testing.
-  private final LocalServiceTestHelper helper = new LocalServiceTestHelper();
+	private static final String FAKE_URL = "localhost:8080/hello";
+	// Set up a helper so that the ApiProxy returns a valid environment for local
+	// testing.
+	private final LocalServiceTestHelper helper = new LocalServiceTestHelper();
 
-  @Mock private HttpServletRequest mockRequest;
-  @Mock private HttpServletResponse mockResponse;
-  private StringWriter responseWriter;
-  private HelloAppEngine servletUnderTest;
+	@Mock
+	private HttpServletRequest mockRequest;
+	@Mock
+	private HttpServletResponse mockResponse;
+	private StringWriter responseWriter;
+	private HelloAppEngine servletUnderTest;
 
-  @Before
-  public void setUp() throws Exception {
-    MockitoAnnotations.initMocks(this);
-    helper.setUp();
+	@Before
+	public void setUp() throws Exception {
+		MockitoAnnotations.initMocks(this);
+		helper.setUp();
 
-    //  Set up some fake HTTP requests
-    when(mockRequest.getRequestURI()).thenReturn(FAKE_URL);
+		// Set up some fake HTTP requests
+		when(mockRequest.getRequestURI()).thenReturn(FAKE_URL);
 
-    // Set up a fake HTTP response.
-    responseWriter = new StringWriter();
-    when(mockResponse.getWriter()).thenReturn(new PrintWriter(responseWriter));
+		// Set up a fake HTTP response.
+		responseWriter = new StringWriter();
+		when(mockResponse.getWriter()).thenReturn(new PrintWriter(responseWriter));
 
-    servletUnderTest = new HelloAppEngine();
-  }
+		servletUnderTest = new HelloAppEngine();
+	}
 
-  @After public void tearDown() {
-    helper.tearDown();
-  }
+	@After
+	public void tearDown() {
+		helper.tearDown();
+	}
 
-  @Test
-  public void doGetWritesResponse() throws Exception {
-    servletUnderTest.doGet(mockRequest, mockResponse);
+	@Test
+	public void doGetWritesResponse() throws Exception {
+		servletUnderTest.doGet(mockRequest, mockResponse);
 
-    // We expect our hello world response.
-    assertThat(responseWriter.toString())
-        .named("HelloAppEngine response")
-        .contains("Hello App Engine - Standard ");
-  }
+		// We expect our hello world response.
+		assertThat(responseWriter.toString()).named("HelloAppEngine response").contains("Hello App Engine - Standard ");
+	}
 
-  @Test
-  public void helloInfoTest() {
-    String result = HelloAppEngine.getInfo();
-    assertThat(result)
-      .named("HelloInfo.getInfo")
-      .containsMatch("^Version:\\s+.+OS:\\s+.+User:\\s");
-  }
+	@Test
+	public void helloInfoTest() {
+		String result = HelloAppEngine.getInfo();
+		assertThat(result).named("HelloInfo.getInfo").containsMatch("^Version:\\s+.+OS:\\s+.+User:\\s");
+	}
 }
 // [END example]
