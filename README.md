@@ -1,15 +1,8 @@
-**Taxibus is here. Share value with other taxi users.**
+**Multi taxi is here. Share value with other taxi users.**
 
-Deneme
-
-*DENEME*
-
+This project aims to share taxi in similar locations.
 ---
 
 ## Share and discount
-
-Kerem
-Serkan
-Ahmet
 
 ---
