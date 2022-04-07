@@ -17,15 +17,15 @@
   --%>
 <!-- [END_EXCLUDE] -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.taxibus.share.servlets.HelloAppEngine" %>
-<%@ page import="com.taxibus.share.servlets.GenerateToken" %>
+<%@ page import="com.mulTaxi.share.servlets.HelloAppEngine" %>
+<%@ page import="com.mulTaxi.share.servlets.GenerateToken" %>
 <html>
 <head>
   <link href='//fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
-  <title>Taxibus</title>
+  <title>mulTaxi</title>
 </head>
 <body>
-    <h1>Taxibus</h1>
+    <h1>mulTaxi</h1>
 
   <p>Generated Here Token <%= GenerateToken.getToken() %>.</p>
   <table>
